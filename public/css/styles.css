@@ -1,0 +1,720 @@
+/*************FONTS********/
+@font-face {
+    font-family: "Gotham Medium";
+    src: url("../fonts/Gotham-Medium.otf")
+}
+@font-face {
+    font-family: "Gotham Book";
+    src: url("../fonts/Gotham-Book.otf")
+}
+@font-face {
+    font-family: "Gotham Ultra";
+    src:  url("../fonts/Gotham-Ultra.otf")
+}
+/**********************************/
+*{
+    font-family: "Gotham Book";
+    box-sizing:border-box;
+}
+body{
+    background:white;
+}
+/**************HEADER************/
+#logo{
+    width: 90px;
+    transition:all 0.3s;
+}
+.logo{
+    width:33%;
+}
+#logo:hover{
+    transform:scale(1.1);
+}
+header{
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    gap: 5%;
+    text-align: center;
+    padding: 15px;
+    background:#FAAF5E;
+}
+
+header a{
+    color:black;
+    text-decoration:none;
+
+}
+header nav{
+    display: flex;
+    flex-direction: column;
+    text-align: initial;
+    width: 33%;
+}
+.user{
+    display:flex;
+    justify-content:flex-end;
+    gap:10px;
+    width: 33%;
+    font-size: 35px;
+    text-align: end;
+}
+
+.account{
+    width: 200px;
+    position: fixed;
+    z-index: 10;
+    top: 161px;
+    right: -400px;
+    background-color: white;
+    border: 2px solid #FAAF5E;
+    padding: 30px;
+    transition: right 0.5s ease;
+    display:flex;
+    flex-direction:column;
+    gap:10px;
+}
+
+.account a {
+    padding:10px;
+}
+.account a:hover {
+    text-decoration:underline;
+}
+.visible{
+    right:0;
+
+}
+.langue{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+    position: absolute;
+    top: 10px;
+    right: 20px;
+}
+
+/*********************MENU BURGER**************/
+/* my_nav menu */
+.my_nav {
+    /* height: 100%; */
+    width: 300px;
+    position: fixed;
+    z-index: 10;
+    top: 161px;
+    left: -400px;
+    background-color: white;
+    border: 2px solid #FAAF5E;
+    padding: 45px;
+    transition: left 0.5s ease;
+}
+
+.my_nav ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+.my_nav ul li {
+    padding: 10px;
+}
+.my_nav a {
+  text-decoration: none;
+  font-size: 20px;
+  color: black;
+  display: block;
+  transition: all 0.3s;
+}
+
+
+.my_nav li:first-child a:hover {
+    text-decoration:underline #85C665;
+}
+.my_nav li:nth-child(2) a:hover{
+    text-decoration:underline #C1734C;
+}
+.my_nav li:nth-child(3) a:hover{
+    text-decoration:underline #7D5BA6;
+}
+.my_nav li:nth-child(4) a:hover{
+    text-decoration:underline #FAAF5E;
+}
+.my_nav li:nth-child(5) a:hover{
+    text-decoration:underline #1085C7;
+}
+.my_nav a:hover{
+    text-underline-position: under;
+}
+
+/* Active class */
+.active {
+  left: 0;
+}
+
+.disparaitre {
+    display:none!important;
+}
+/* Close btn */
+.my_nav .close {
+  position: absolute;
+  top: 0;
+  right: 25px;
+  font-size: 40px;
+}
+
+.burger-icon span {
+  display: block;
+  width: 35px;
+  height: 6px;
+  background-color: black;
+  margin: 6px 0;
+}
+
+#openBtn{
+    width:33%;
+}
+/**********************************MAIN****************/
+.container {
+    max-width: 90%;
+    margin:0 auto;
+}
+/***********************FOOTER************/
+footer{
+    height: 200px;
+    background: #FAAF5E;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin-top: 50px;
+}
+
+footer a {
+    text-decoration:none;
+    color:black;
+}
+.reseau a {
+    text-decoration: none;
+    color: black;
+    font-size: 25px;
+}
+/****************************FORMULAIRE INSCRIPTION OU CONNEXION*********************/
+
+.user_id{
+    position: absolute;
+    top: 10%;
+    width: 500px;
+    z-index: 20;
+    display: flex;
+    flex-direction: column;
+    align-items:center;
+    gap: 20px;
+    padding:30px;
+    background:#c2734b;
+    border-radius:10px;
+    box-shadow: 0px 0px 10px 1px black;
+}
+.user_id form{
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.user_id form input{
+    padding: 10px;
+    border-radius: 5px;
+    border: none;
+}
+
+.connexion, .inscription {
+    width: 400px;
+}
+.connexion{
+    padding: 10px;
+    border-bottom: 3px solid #faaf5e;
+}
+.button{
+    width: 50%;
+    padding: 15px!important;
+    margin: 0 auto;
+    background: #faaf5e;
+    color: white;
+    font-size: 22px;
+    cursor:pointer;
+}
+.hidden{
+    display:none;
+}
+
+.overlay {
+    position:fixed;
+    top:0;
+    left:0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(250,	175, 94, .5);
+    backdrop-filter: blur(4px);
+    z-index:10;
+}
+/***************SWIPER HOME PAGE************/
+.swiper {
+    width: 100%;
+    height: 100%;
+    margin:50px auto;
+}
+
+.swiper-slide {
+    text-align: center;
+    font-size: 18px;
+    background: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height:800px;
+}
+
+.swiper-slide a {
+    overflow:hidden;
+    text-align:center;
+    width: 100%;
+    height:100%;
+}
+.swiper-slide a img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: 50% 30%;
+}
+.swiper-pagination-bullet{
+    border-radius:0;
+    width:20px;
+    height:20px;
+    background:#C1734C;
+}
+
+/****************************SECTION HOME PAGE BLOC DE NAVIGATION*******************/
+.home_contain_flexbox {
+    display:flex;
+    gap:20px;
+    margin:50px auto;
+}
+.card {
+    width: 25%;
+    display:flex;
+    flex-direction:column;
+    gap:10px;
+    
+}
+.img_container{
+    overflow:hidden;
+}
+.img_container img {
+    object-fit:cover;
+    width: 100%;
+    height: 300px;
+    object-position: 50% 20%;
+}
+.title{
+    padding:0 5px;
+}
+.link1{
+    border-top:3px solid #85C665;
+}
+.link2{
+    border-top:3px solid #C1734C;
+}
+.link3{
+    border-top:3px solid #7D5BA6;
+}
+.link4{
+    border-top:3px solid #FAAF5E;
+}
+.link5{
+    border-top:3px solid #1085C7;
+}
+
+/***************************************PAGE EXPOSITION**************/
+h2{
+    font-family: "Gotham Ultra";
+    font-size: 80px;
+    margin: 0;
+}
+h3{
+   font-size: 28px;
+    margin: 0px;
+    font-weight: normal;
+}
+h4{
+    font-size: 20px;
+    font-weight: normal;
+}
+.expo_infos p {
+    text-align: justify;
+    column-count: 2;
+    column-gap:50px;
+    font-size: 15px;
+    margin: 20px auto;
+}
+
+.expo_card {
+    display: flex;
+    justify-content: space-between;
+    gap: 25px;
+    margin: 60px 0;
+    padding: 30px 0;
+    border-bottom: 4px solid #FAAF5E;
+    align-items: center;
+}
+
+.expo_infos{
+    padding:10px;
+    width: 65%;
+}
+
+.expo_img{
+    overflow: hidden;
+    width: 35%;
+    height: 600px;
+    padding: 10px;
+}
+.expo_img img{
+    width: 100%;
+    height: 100%;
+    object-fit:cover;
+}
+
+/********************************PAGE BOUTIQUE***************/
+.container_products {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px;
+    margin:60px auto;
+}
+
+.product_card{
+    width: 25%;
+    border: 2px solid #938b87;
+    padding: 10px;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+    justify-content: flex-end;
+    box-shadow: 1px 0px 5px -1px #000000;
+}
+
+.product_img {
+    width: 70%;
+}
+.product_infos{
+    border-top: 2px solid #faaf5e;
+}
+
+.product_img {
+    overflow:hidden;
+}
+.product_img img{
+    object-fit:cover;
+    width: 100%;
+}
+
+/***********************Bouton ajout au panier*********************************/
+.bouton_add_panier {
+    border-radius: 5px;
+    padding: 10px;
+    background: #faaf5e;
+    cursor: pointer;
+    color: white;
+    transition:all 0.3s;
+    margin:10px auto;
+}
+
+.bouton_add_panier:hover{
+    transform:scale(1.05);
+}
+
+/*****************PAGE ACCOUNT ************/
+.titre_account, .titre_account_orders{
+    text-align:center;
+    font-size:40px;
+    transition: all ease 0.4s;
+    margin: 50px auto;
+}
+.titre_account a, .titre_account_orders a {
+    text-decoration:none;
+    color:black;
+    
+}
+.titre_account:hover, .titre_account_orders:hover {
+    text-decoration:underline;
+    transform:scale(1.05);
+}
+
+.info_user_container{
+    padding: 10px;
+    background: #faaf5e;
+    border-radius: 10px;
+    margin:30px auto;
+    width: 60%;
+}
+.my_infos, .my_orders{
+    text-align:center;
+}
+
+/**************************PANIER**********/
+.panier{
+    z-index:20;
+    top: 161px;
+    position: absolute;
+    right: 0;
+    background-color: white;
+    border: 2px solid #FAAF5E;
+    display: flex;
+    align-items:center;
+    flex-direction: column;
+    width: 30%;
+}
+
+.prod_bloc{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    padding: 20px;
+    border-bottom:2px solid #FAAF5E;
+    width: 85%;
+    margin:10px 0;
+}
+
+.prod_img{
+    overflow: hidden;
+    width: 40%;
+}
+
+.prod_img img{
+    object-fit: cover;
+    width: 100%;
+}
+.bouton_supr_panier{
+    cursor: pointer;
+    padding: 10px;
+    background: #faaf5e;
+    color: white;
+    border-radius: 10px;
+}
+
+.panier_choice {
+    display: flex;
+    gap: 40px;
+    padding: 10px;
+    margin: 10px 0;
+    order: 30;
+}
+
+.panier_choice a{
+    text-decoration:none;
+    color:black;
+    font-size:20px;
+}
+.panier_choice i {
+    margin:0 10px;
+}
+
+#bouton_panier{
+    position:relative;
+}
+#cartBadge{
+    position: absolute;
+    top: -2px;
+    left: 35px;
+    font-size: 15px;
+}
+/**************************************PAGE INFOS PRATIQUE**********/
+.info_pratiques_container{
+    display: flex;
+    justify-content: space-between;
+    gap: 3%;
+    margin:40px auto;
+    padding:20px;
+}
+
+.infos_pratiques{
+    display: flex;
+    flex-direction: column;
+    gap:20px;
+    padding:10px;
+    width: 50%;
+}
+
+h5{
+    font-size: 20px;
+    font-family: "Gotham Medium";
+}
+span{
+    font-weight:bold;
+    font-family: "Gotham Medium";
+}
+
+h6{
+    font-size: 25px;
+    font-family: "Gotham Medium";
+}
+h7{
+    font-family: "Gotham Medium";
+    font-weight: bold;
+}
+.violet{
+    border-top:2px solid #7D5BA6;
+}
+.vert{
+    border-top:2px solid #85C665;
+
+}
+.infos_pratiques_text{
+    margin:20px 0;
+}
+.titre_page{
+    margin:30px auto;
+}
+
+/*******************PAGE VENIR ET VISITER*************/
+.bloc_text_bas{
+    display:flex;
+    justify-content:space-between;
+    align-items: stretch;
+}
+
+.preface_bloc_text{
+    text-align:justify;
+    padding:10px;
+}
+
+.bloc_bas{
+    width: 45%;
+}
+
+/************PAGE ATELIER ET ANIMATION*********/
+.atelier_info{
+    background: #faaf5e;
+    border-radius: 10px;
+    text-align: center;
+}
+
+.atelier_container{
+    display:flex;
+    flex-wrap:wrap;
+    justify-content:space-around;
+    gap:20px;
+    margin: 30px auto;
+}
+.categ_atelier{
+    width: 48%;
+    padding: 10px;
+    border: 2px solid #faaf5e;
+    border-radius: 10px;
+
+}
+
+.infos_utiles{
+    display: flex;
+    padding:10px;
+    gap:30px;
+}
+
+.bloc_utile{
+    width: 50%;
+}
+
+/*************************************PAGE PAIEMENT**************/
+.livraison{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.livraison input{
+    padding: 10px;
+    border-radius: 5px;
+    border: none;
+}
+
+.livraison_bloc{
+    padding: 30px;
+    background: #c2734b;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px 1px black;
+    margin: 100px auto;
+    width: 50%;
+}
+
+.co_id{
+    padding: 30px;
+    background: #c2734b;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px 1px black;
+    width: 50%;
+    margin: 50px auto;
+}
+
+
+.connexion{
+    width: 100%;
+}
+.connexion form{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.connexion form input{
+    padding: 10px;
+    border-radius: 5px;
+    border: none;
+}
+
+.order_ok{
+    padding: 30px;
+    background: #c2734b;
+    border-radius: 10px;
+    margin: 50px auto;
+    text-align:center;
+}
+
+/*******************RESPONSIVE *************/
+@media (max-width: 780px){
+    footer, .prod_bloc{
+        flex-direction:column;
+    }
+    
+    .home_contain_flexbox{
+        flex-wrap:wrap;
+        justify-content:center;
+    }
+    
+    .expo_infos{
+        width: 100%;
+    }
+    .expo_infos p {
+        column-count:1;
+    }
+    .expo_img{
+        display:none;
+    }
+    .product_card{
+        width: 45%;
+    }
+    h2{
+        font-size:60px;
+    }
+    .titre_page{
+        text-align:center;
+    }
+    .panier_choice {
+        flex-direction: column-reverse;
+    }
+    
+}
+
