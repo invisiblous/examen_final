@@ -145,7 +145,7 @@ document.addEventListener("DOMContentLoaded",function() {
   nav.classList.remove("active");
   }
   
-  // Compteur d'article et affichage du nombre sur l'icone panier
+// Compteur d'article et affichage du nombre sur l'icone panier
   function countCart() {
     let bouton_supr_panier = document.querySelectorAll('.bouton_supr_panier');
     let nb = bouton_supr_panier.length;
@@ -158,7 +158,7 @@ document.addEventListener("DOMContentLoaded",function() {
     }
   }
   
-  // Suppression article du panier
+// Suppression article du panier
   function deleteCart() {
     let bouton_supr_panier = document.querySelectorAll('.bouton_supr_panier');
     for(let i of bouton_supr_panier) {
@@ -179,7 +179,7 @@ document.addEventListener("DOMContentLoaded",function() {
     countCart();
   }
   
-  // Gestion de la connexion
+// Gestion de la connexion
   function connex(connex_id) {
     connex_id.addEventListener("submit", e =>{
     e.preventDefault();
@@ -193,6 +193,7 @@ document.addEventListener("DOMContentLoaded",function() {
         if(data=="COK") {
           user_id.classList.add("hidden");
           overlay.classList.add("hidden");
+          // si je me co via le panier je refres la page
           if(connex_id.id == 'connexion_2') {
             location.reload();
           }

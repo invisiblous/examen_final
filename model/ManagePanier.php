@@ -1,11 +1,11 @@
 <?php
-
 // je recupère ma classe parente
 require_once 'Manage.php';
+
 // je crée ma nouvelle classe
 class ManagePanier extends Manage {
     
-    // je crée une methode pour récupérer la liste des produits
+    // je crée une methode pour récupérer les infos d'un produit
     public function getProduitInfos(int $id):object {
         $data=['id'=>$id];
         $query = "SELECT * FROM products WHERE id=:id";

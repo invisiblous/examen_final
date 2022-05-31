@@ -1,10 +1,10 @@
 <?php
-
 // je recupère ma classe parente
 require_once 'Manage.php';
+
 // je crée ma nouvelle classe
 class ManageAccount extends Manage {
-   
+    // creation d'une fonction pour recuperer les infos des commandes
     public function getOrders() {
         $data = ['user_id' => $_SESSION['user']['id']];
         $query = "

@@ -95,10 +95,6 @@ class Manage {
     }
     
     
-    
-    
-    
-    
     public function connexion(array $post):array {
         $data=[
             'mail'=>$post['mail'],

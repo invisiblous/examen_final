@@ -1,15 +1,15 @@
 <?php
-
 ob_start();
 
+// si je ne suis pas connecté renvoye le formulaire de connexion
 if(!isset($_SESSION['user'])) {
     echo '
         <div class="co_id">
             '.$connex['connexion'].'
         </div>';
 } else {
-    ?>
-    
+?>
+
     <div class="livraison_bloc">
         <form class="livraison" method="post" id="livraison">
             <h8>Adresse de livraison</h8>
@@ -28,7 +28,7 @@ if(!isset($_SESSION['user'])) {
 
     
     
-    <?php
+<?php
 }
 
 $content = ob_get_clean();

@@ -12,24 +12,68 @@
     src:  url("../fonts/Gotham-Ultra.otf")
 }
 /**********************************/
+
+/********** Global***************/
 *{
     font-family: "Gotham Book";
     box-sizing:border-box;
 }
+
 body{
     background:white;
 }
+
+h2{
+    font-family: "Gotham Ultra";
+    font-size: 80px;
+    margin: 0;
+}
+
+h3{
+   font-size: 28px;
+    margin: 0px;
+    font-weight: normal;
+}
+
+h4{
+    font-size: 20px;
+    font-weight: normal;
+}
+
+h5{
+    font-size: 20px;
+    font-family: "Gotham Medium";
+}
+
+span{
+    font-weight:bold;
+    font-family: "Gotham Medium";
+}
+
+h6{
+    font-size: 25px;
+    font-family: "Gotham Medium";
+}
+
+h7{
+    font-family: "Gotham Medium";
+    font-weight: bold;
+}
+/**********************************/
+
 /**************HEADER************/
 #logo{
     width: 90px;
     transition:all 0.3s;
 }
-.logo{
-    width:33%;
-}
 #logo:hover{
     transform:scale(1.1);
 }
+
+.logo{
+    width:33%;
+}
+
 header{
     display: flex;
     align-items: flex-end;
@@ -45,12 +89,14 @@ header a{
     text-decoration:none;
 
 }
+
 header nav{
     display: flex;
     flex-direction: column;
     text-align: initial;
     width: 33%;
 }
+
 .user{
     display:flex;
     justify-content:flex-end;
@@ -81,24 +127,15 @@ header nav{
 .account a:hover {
     text-decoration:underline;
 }
+
 .visible{
     right:0;
-
 }
-.langue{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-content: center;
-    position: absolute;
-    top: 10px;
-    right: 20px;
-}
+/**********************************/
 
 /*********************MENU BURGER**************/
-/* my_nav menu */
+/* navigation */
 .my_nav {
-    /* height: 100%; */
     width: 300px;
     position: fixed;
     z-index: 10;
@@ -109,13 +146,11 @@ header nav{
     padding: 45px;
     transition: left 0.5s ease;
 }
-
 .my_nav ul {
   list-style-type: none;
   padding: 0;
   margin: 0;
 }
-
 .my_nav ul li {
     padding: 10px;
 }
@@ -127,7 +162,7 @@ header nav{
   transition: all 0.3s;
 }
 
-
+/* soulignage de couleur */
 .my_nav li:first-child a:hover {
     text-decoration:underline #85C665;
 }
@@ -151,10 +186,10 @@ header nav{
 .active {
   left: 0;
 }
-
 .disparaitre {
     display:none!important;
 }
+
 /* Close btn */
 .my_nav .close {
   position: absolute;
@@ -174,12 +209,16 @@ header nav{
 #openBtn{
     width:33%;
 }
-/**********************************MAIN****************/
+/*****************************************/
+
+/*****************MAIN****************/
 .container {
     max-width: 90%;
     margin:0 auto;
 }
-/***********************FOOTER************/
+/*****************************************/
+
+/******************FOOTER************/
 footer{
     height: 200px;
     background: #FAAF5E;
@@ -198,8 +237,9 @@ footer a {
     color: black;
     font-size: 25px;
 }
-/****************************FORMULAIRE INSCRIPTION OU CONNEXION*********************/
+/*****************************************/
 
+/****************************FORMULAIRE INSCRIPTION OU CONNEXION*********************/
 .user_id{
     position: absolute;
     top: 10%;
@@ -219,7 +259,6 @@ footer a {
     flex-direction: column;
     gap: 5px;
 }
-
 .user_id form input{
     padding: 10px;
     border-radius: 5px;
@@ -256,6 +295,8 @@ footer a {
     backdrop-filter: blur(4px);
     z-index:10;
 }
+/*****************************************/
+
 /***************SWIPER HOME PAGE************/
 .swiper {
     width: 100%;
@@ -292,6 +333,7 @@ footer a {
     height:20px;
     background:#C1734C;
 }
+/*****************************************/
 
 /****************************SECTION HOME PAGE BLOC DE NAVIGATION*******************/
 .home_contain_flexbox {
@@ -333,22 +375,9 @@ footer a {
 .link5{
     border-top:3px solid #1085C7;
 }
+/*****************************************/
 
 /***************************************PAGE EXPOSITION**************/
-h2{
-    font-family: "Gotham Ultra";
-    font-size: 80px;
-    margin: 0;
-}
-h3{
-   font-size: 28px;
-    margin: 0px;
-    font-weight: normal;
-}
-h4{
-    font-size: 20px;
-    font-weight: normal;
-}
 .expo_infos p {
     text-align: justify;
     column-count: 2;
@@ -383,6 +412,7 @@ h4{
     height: 100%;
     object-fit:cover;
 }
+/*****************************************/
 
 /********************************PAGE BOUTIQUE***************/
 .container_products {
@@ -420,6 +450,7 @@ h4{
     object-fit:cover;
     width: 100%;
 }
+/*****************************************/
 
 /***********************Bouton ajout au panier*********************************/
 .bouton_add_panier {
@@ -435,6 +466,7 @@ h4{
 .bouton_add_panier:hover{
     transform:scale(1.05);
 }
+/*****************************************/
 
 /*****************PAGE ACCOUNT ************/
 .titre_account, .titre_account_orders{
@@ -463,6 +495,7 @@ h4{
 .my_infos, .my_orders{
     text-align:center;
 }
+/*****************************************/
 
 /**************************PANIER**********/
 .panier{
@@ -531,6 +564,8 @@ h4{
     left: 35px;
     font-size: 15px;
 }
+/*****************************************/
+
 /**************************************PAGE INFOS PRATIQUE**********/
 .info_pratiques_container{
     display: flex;
@@ -548,23 +583,6 @@ h4{
     width: 50%;
 }
 
-h5{
-    font-size: 20px;
-    font-family: "Gotham Medium";
-}
-span{
-    font-weight:bold;
-    font-family: "Gotham Medium";
-}
-
-h6{
-    font-size: 25px;
-    font-family: "Gotham Medium";
-}
-h7{
-    font-family: "Gotham Medium";
-    font-weight: bold;
-}
 .violet{
     border-top:2px solid #7D5BA6;
 }
@@ -578,6 +596,7 @@ h7{
 .titre_page{
     margin:30px auto;
 }
+/*****************************************/
 
 /*******************PAGE VENIR ET VISITER*************/
 .bloc_text_bas{
@@ -594,6 +613,7 @@ h7{
 .bloc_bas{
     width: 45%;
 }
+/*****************************************/
 
 /************PAGE ATELIER ET ANIMATION*********/
 .atelier_info{
@@ -626,8 +646,9 @@ h7{
 .bloc_utile{
     width: 50%;
 }
+/*****************************************/
 
-/*************************************PAGE PAIEMENT**************/
+/**********************PAGE PAIEMENT**************/
 .livraison{
     display: flex;
     flex-direction: column;
@@ -682,6 +703,7 @@ h7{
     margin: 50px auto;
     text-align:center;
 }
+/*****************************************/
 
 /*******************RESPONSIVE *************/
 @media (max-width: 780px){

@@ -12,6 +12,7 @@
 </head>
 <body>
     <header>
+        <!--Nav menu burger -->
         <nav class="my_nav" id="my_nav">
             <a id="closeBtn" href="#" class="close">&times;</a>
             <ul>
@@ -22,6 +23,9 @@
                 <li><a href="index.php?page=boutique">LA BOUTIQUE</a></li>
             </ul>
         </nav>
+        <!----------------->
+        
+        <!--Menu Burger -->
         <a href="#" id="openBtn">
             <span class="burger-icon">
                 <span></span>
@@ -29,6 +33,7 @@
                 <span></span>
             </span>
         </a>
+        <!--------------->
         
         <a class="logo" href="index.php"><img id="logo" src="./public/images/logo_musée_de_la_faune.png" alt="logo"></a>
         
@@ -42,13 +47,16 @@
         </div>
         <!-- espace panier -->
         <div class="disparaitre panier "></div>
+        <!------------------>
         
+        <!-- formulaire de connexion et d'inscription-->
         <div class="overlay hidden"></div>
         <div class="user_id hidden" id="user_id">
-                <div class="erreur"></div>
+            <div class="erreur"></div>
                 <?=$template['connexion']?>
                 <?=$template['signup']?>
-            </div>
+        </div>
+        <!---------------------------------------->
     </header>
     
     <main class="container">

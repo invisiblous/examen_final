@@ -6,8 +6,7 @@ $global = new Manage();
 
 $connexion_ok = $global->connexion($_POST);
 
-
-// gestion de la session et du retour
+// Gestion de la session et du retour
     if(isset($connexion_ok['id'])) {
         // je remplis ma $_SESSION
         $_SESSION['user'] = $connexion_ok;
@@ -15,7 +14,7 @@ $connexion_ok = $global->connexion($_POST);
         
     } else { 
         echo '
-                <div class="alert">
-                    Mdp ou Identifiant invalide
-                </div>';
+            <div class="alert">
+                Mdp ou Identifiant invalide
+            </div>';
     }
