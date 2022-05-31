@@ -1,6 +1,5 @@
 <?php
 session_start();
-var_dump($_SESSION);
 // Déconnexion
 if(isset($_GET['deco'])) {
     unset($_SESSION);

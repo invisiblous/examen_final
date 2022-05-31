@@ -11,7 +11,7 @@ if(!isset($_SESSION['user'])) {
     ?>
     
     <div class="livraison_bloc">
-        <form class="livraison" method="post">
+        <form class="livraison" method="post" id="livraison">
             <h8>Adresse de livraison</h8>
             <input type="text" name="address" placeholder="adresse"/>
             <input type="number" name="cp" placeholder="Code Postal"/>

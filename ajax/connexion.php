@@ -8,9 +8,9 @@ $connexion_ok = $global->connexion($_POST);
 
 
 // gestion de la session et du retour
-    if($connexion_ok) {
+    if(isset($connexion_ok['id'])) {
         // je remplis ma $_SESSION
-        $_SESSION['user'] = $_POST['mail'];
+        $_SESSION['user'] = $connexion_ok;
         echo "COK";
         
     } else { 

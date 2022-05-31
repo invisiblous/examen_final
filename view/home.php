@@ -5,13 +5,13 @@ ob_start();
     <div class="swiper mySwiper">
         <div class="swiper-wrapper">
             <div class="swiper-slide slide1">
-                <a href="index.php?page=expositions"><img src="./public/images/girafe.jpg"></a>
+                <a href="index.php?page=expositions"><img src="./public/images/girafe.jpg" alt="girafe"></a>
             </div>
             <div class="swiper-slide slide2">
-                <a href="index.php?page=expositions"><img src="./public/images/koala.jpg"></a>
+                <a href="index.php?page=expositions"><img src="./public/images/koala.jpg" alt="koala"></a>
             </div>
             <div class="swiper-slide slide3">
-                <a href="index.php?page=expositions"><img src="./public/images/léopard.jpg"></a>
+                <a href="index.php?page=expositions"><img src="./public/images/léopard.jpg" alt="leopard"></a>
             </div>
         </div>
         <div class="swiper-pagination"></div>

@@ -119,10 +119,14 @@ document.addEventListener("DOMContentLoaded",function() {
   
 // validation du panier
   if(valider_commande){
+    let livraison = document.getElementById('livraison');
     valider_commande.addEventListener("click", e =>{
       e.preventDefault();
+      let formData = new FormData(livraison);
+      let obj = { 'method': 'POST', 'body': formData };
       livraison_bloc.classList.add('disparaitre');
-      fetch('./ajax/validation.php')
+      
+      fetch('./ajax/validation.php', obj)
         .then(response => response.text())
         .then(data => {
           order.innerHTML = data;
@@ -189,11 +193,15 @@ document.addEventListener("DOMContentLoaded",function() {
         if(data=="COK") {
           user_id.classList.add("hidden");
           overlay.classList.add("hidden");
+          if(connex_id.id == 'connexion_2') {
+            location.reload();
+          }
           bouton_id.addEventListener("click",e =>{
             e.preventDefault();
             account.classList.toggle("visible");
             user_id.classList.add("hidden");
             overlay.classList.add("hidden");
+           
           });
        } else {
           // si PASOK affiche un message d'erreur au dessu du formulaire

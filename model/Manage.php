@@ -99,19 +99,19 @@ class Manage {
     
     
     
-    public function connexion($post):bool {
+    public function connexion(array $post):array {
         $data=[
             'mail'=>$post['mail'],
             'pwd'=>md5($post['pwd'])
             ];
-        $query="SELECT id FROM users WHERE mail=:mail AND pwd=:pwd";
+        $query="SELECT * FROM users WHERE mail=:mail AND pwd=:pwd";
         $user = $this->getQuery($query, $data);
         $row = $user->rowCount();
         
         if($row){
-            return true;
+            return $user->fetch();
         } else{
-            return false;
+            return [];
         }
     }
     
@@ -140,7 +140,7 @@ class Manage {
     public function userTemplate(string $extends_id=''):array {
         $connexion = '
             <div class="connexion" id="bloc_connexion">
-                <form action="" method="post" id="connexion'.$extends_id.'">
+                <form method="post" id="connexion'.$extends_id.'">
                     <input type="text" name="mail" placeholder="mail"/>
                     <input type="password" name="pwd" placeholder="mdp"/>
                     <input class="button" type="submit" name="submit" value="Se Connecter"/>

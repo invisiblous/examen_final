@@ -49,10 +49,6 @@
                 <?=$template['connexion']?>
                 <?=$template['signup']?>
             </div>
-        <div class="langue">
-            <a href="">FR</a>
-            <a href="">EN</a>
-        </div>
     </header>
     
     <main class="container">

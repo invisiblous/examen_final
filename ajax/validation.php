@@ -5,8 +5,10 @@ require '../model/ManagePaiement.php';
 
 $test = new ManagePaiement();
 
-$insert = $test->InsertOrder();
-$insert2 = $test->InsertAdressLivraison();
+
+$test->InsertAdressLivraison();
+$test->InsertOrder();
+
 
 echo'
     <div class="order_ok">
